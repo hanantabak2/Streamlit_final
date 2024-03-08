@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.title("Main Page")
+st.title("Application Overview and Data Upload")
 st.sidebar.success("Select a page above.")
 
 # if "my_input" not in st.session_state:
@@ -30,6 +30,9 @@ if uploaded_file is not None:
     # df.dropna(subset=['CustomerID'],how='all',inplace=True)
     df.dropna(how='all',inplace=True)
 
+    # comment
+    st.write('we will be using selectbox to take user input')
+
     columns = df.columns
     selected_invoice_date = st.selectbox("Select the invoice_date column:", columns)
     selected_cust_id = st.selectbox("Select the customer id column:", columns)
@@ -40,6 +43,9 @@ if uploaded_file is not None:
     st.write(df.head())
 
     st.session_state["my_data"] = df
+
+    # submit buttons 
+    st.write('we can store clicks,submits on screen into actionable items')
 
     submit = st.button("Submit")
 

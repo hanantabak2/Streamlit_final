@@ -19,6 +19,8 @@ st.sidebar.success("Select a page above.")
 #     st.session_state["my_input"] = my_input
 #     st.write("You have entered: ", my_input)
 
+st.image('arch.png', caption='Architecture of the app')
+
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
 

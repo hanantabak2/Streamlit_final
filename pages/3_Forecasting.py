@@ -12,7 +12,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 
-st.title("Contact")
+st.title("Time Series Details")
 
 # st.write(st.session_state["my_data"].head())
 df = st.session_state["my_data"]

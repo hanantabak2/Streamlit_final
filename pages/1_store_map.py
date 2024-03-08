@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd 
 from streamlit_folium import st_folium
 
+
 # Define your dictionary of Emirate coordinates (replace with actual values)
 emirate_coordinates =  {'Abu-Dhabi': [(24.508834, 54.407412), (24.501583, 54.376071), (24.490583, 54.358297), (24.434194, 54.414625), (24.481739, 54.366666)],
                 'Dubai': [(25.025879, 55.104579), (25.227130, 55.273139), (25.274845, 55.370970)],
@@ -22,7 +23,9 @@ def calculate_average_location(coordinates):
     return [latitude_sum / len(coordinates), longitude_sum / len(coordinates)]
 
 # Streamlit app setup
-st.title("UAE Emirate Store Locations")
+st.title("UAE Store Locations: Lucas")
+
+st.write("this is using folium and open street map, also this is static page to demonstrate capability")
 
 # Dropdown for choosing an emirate
 selected_emirate = st.selectbox("Choose an Emirate", list(emirate_coordinates.keys()))
